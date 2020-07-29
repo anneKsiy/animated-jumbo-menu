@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <title>Portfolio</title>
+</head>
+<body>
+
+    <nav id="overlay">
+        <img src="https://img.icons8.com/material-sharp/24/000000/back.png" alt="back button" class="close-btn" id="close-menu">
+        <ul>
+            <li>
+                <a href="#">home</a>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, itaque?</span>
+            </li>
+            <li>
+                <a href="#">about</a>
+                <span>Lorem ipsum dolor sit amet.</span>
+            </li>
+            <li>
+                <a href="#">services</a>
+                <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat amet accusamus vel veritatis fugit ratione adipisci iure soluta vero quae.</span>
+            </li>
+            <li>
+                <a href="#">contact</a>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, amet.</span>
+            </li>
+        </ul>
+    </nav>
+
+    <header>
+        <a href="#" class="logo"><img src="images/default-monochrome.svg" alt="logo" id="logo"></a>
+
+        <svg class="menu-btn" id="open-menu" width="80" height="58" viewBox="0 0 80 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="60" height="10" rx="7" fill="#CB9831"/>
+            <rect y="22" width="60" height="10" rx="7" fill="#CB9831"/>
+            <rect y="44" width="60" height="10" rx="7" fill="#CB9831"/>
+            </svg>
+            
+        <!-- <img src="https://img.icons8.com/material-rounded/24/000000/menu.png" alt="burger button" class="menu-btn" id="open-menu"> -->
+    </header>
+    
+    <section>
+        <h1>a developer that gets you</h1>
+    </section>
+
+    <script>
+        const overlay = document.getElementById("overlay");
+        const closeMenu = document.getElementById("close-menu");
+
+        document.getElementById("open-menu").addEventListener("click", function() {
+            overlay.classList.add("show-menu");
+        });
+
+        document.getElementById("close-menu").addEventListener("click", function() {
+            overlay.classList.add("hide-menu");
+            // overlay.classList.remove("show-menu");
+            // overlay.classList.remove("hide-menu");
+            setTimeout(function() {
+            overlay.classList.remove("show-menu");
+            overlay.classList.remove("hide-menu");
+        }, 3200);
+
+        });
+    </script>
+</body>
+</html>
