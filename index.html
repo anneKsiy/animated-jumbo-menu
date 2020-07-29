@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <title>Portfolio</title>
 </head>
-<body>
+<body class="flex-container">
 
     <nav id="overlay">
-        <img src="https://img.icons8.com/material-sharp/24/000000/back.png" alt="back button" class="close-btn" id="close-menu">
+        <!-- <img src="https://img.icons8.com/material-sharp/24/000000/back.png" alt="back button" class="close-btn" id="close-menu"> -->
+        <i class="fa fa-chevron-right close-btn fa-3x" id="close-menu" aria-hidden="true"></i>
         <ul>
             <li>
                 <a href="#">home</a>
@@ -33,11 +35,13 @@
     <header>
         <a href="#" class="logo"><img src="images/default-monochrome.svg" alt="logo" id="logo"></a>
 
-        <svg class="menu-btn" id="open-menu" width="80" height="58" viewBox="0 0 80 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="60" height="10" rx="7" fill="#CB9831"/>
-            <rect y="22" width="60" height="10" rx="7" fill="#CB9831"/>
-            <rect y="44" width="60" height="10" rx="7" fill="#CB9831"/>
-            </svg>
+        <!-- <svg class="menu-btn" id="open-menu" width="80" height="58" viewBox="0 0 80 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect class="rect" width="60" height="10" rx="7" fill="#CB9831"/>
+            <rect class="rect" y="22" width="60" height="10" rx="7" fill="#CB9831"/>
+            <rect class="rect" y="44" width="60" height="10" rx="7" fill="#CB9831"/>
+            </svg> -->
+
+        <i class="fa fa-bars menu-btn fa-3x" id="open-menu" aria-hidden="true"></i>
             
         <!-- <img src="https://img.icons8.com/material-rounded/24/000000/menu.png" alt="burger button" class="menu-btn" id="open-menu"> -->
     </header>
@@ -46,11 +50,20 @@
         <h1>a developer that gets you</h1>
     </section>
 
+    <footer>
+        <span class="footer-copyright">Copyright &copy; 2020 | Abdullah Adam </span>
+        <div class="icon-links">
+            <a href="#"><i class="fa fa-github fa-2x push" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+        </div>
+    </footer>
+
     <script>
         const overlay = document.getElementById("overlay");
         const closeMenu = document.getElementById("close-menu");
+        const menuButton = document.getElementById("open-menu");
 
-        document.getElementById("open-menu").addEventListener("click", function() {
+        menuButton.addEventListener("click", function() {
             overlay.classList.add("show-menu");
         });
 
