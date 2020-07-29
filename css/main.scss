@@ -20,6 +20,8 @@ body, html {
     position: relative;
 }
 
+// Header
+
 header {
     width: calc(100% - 4em);
     padding: 2em;
@@ -31,7 +33,7 @@ header {
     }
 
     .menu-btn {
-        width: 3rem;
+        // width: 3rem;
         float: right;
         cursor: pointer;  
         
@@ -39,8 +41,14 @@ header {
             color: #cb983175;
             transition-duration: 0.3s;
         }
+
+        @media (max-width: 800px) {
+            font-size: 2rem;
+        }
     }
 }
+
+// Section
 
 section {
     padding: 4em 4em 0 4em;
@@ -75,6 +83,8 @@ section {
         }
     }
 }
+
+// Nav
 
 nav {
     position: absolute;
@@ -133,6 +143,71 @@ nav {
         }
     }
 }
+
+// Footer
+
+footer {
+    position: absolute;
+    bottom: .6em;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .footer-copyright {
+        margin: 0 auto;
+        align-self: center;
+    }
+
+    .icon-links {
+        position: relative;
+
+        .fa-linkedin {
+            position: absolute;
+            right: 1.3em;
+            bottom: -.1em;
+        }
+    
+        .fa-github {
+            position: absolute;
+            right: 3.3em;
+            bottom: -.1em;
+        }
+    
+        a:hover {
+            color: #cb983175;
+            transition-duration: 0.3s;
+        }
+    }
+    
+    @media (orientation: portrait) and (max-width: 800px) {
+            .fa-2x {
+                font-size: 1.2rem;
+            }
+            .fa-github {
+                right: 2.8em !important;
+            }
+            .footer-copyright {
+                font-size: .7rem;
+            }
+        }
+
+    @media (orientation: landscape) and (max-width: 1000px) {
+            .fa-2x {
+                font-size: 1.2rem;
+            }
+            .fa-github {
+                right: 4.8em !important;
+            }
+            .fa-linkedin {
+                right: 2em !important;
+            }
+            .footer-copyright {
+                font-size: .7rem;
+            }
+        }
+}
+
+// Animations
 
 .show-menu {
     display: block;
@@ -234,43 +309,5 @@ nav {
     }
     to {
         transform: scaleX(0);
-    }
-}
-
-// Footer
-
-footer {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    display: flex;
-    padding-bottom: 1em;
-
-    .footer-copyright {
-        margin: 0 auto;
-        padding-left: 4em;
-        align-self: center;
-        justify-self: center;
-    }
-
-    .icon-links {
-        align-self: center;
-        margin-right: 3em;
-
-        a:hover {
-            color: #cb983175;
-            transition-duration: 0.3s;
-        }
-        .push {
-            padding-right: 1em;
-        }
-    }
-    @media (max-width: 800px) {
-        .fa-2x {
-            font-size: 1.2rem;
-        }
-        .footer-copyright {
-            font-size: .7rem;
-        }
     }
 }

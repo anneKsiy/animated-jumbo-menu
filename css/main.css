@@ -35,7 +35,6 @@ header #logo {
 }
 
 header .menu-btn {
-  width: 3rem;
   float: right;
   cursor: pointer;
 }
@@ -44,6 +43,12 @@ header .menu-btn:hover {
   color: #cb983175;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
+}
+
+@media (max-width: 800px) {
+  header .menu-btn {
+    font-size: 2rem;
+  }
 }
 
 section {
@@ -146,6 +151,74 @@ nav ul span {
 
 nav ul li {
   opacity: 0;
+}
+
+footer {
+  position: absolute;
+  bottom: .6em;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .footer-copyright {
+  margin: 0 auto;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+footer .icon-links {
+  position: relative;
+}
+
+footer .icon-links .fa-linkedin {
+  position: absolute;
+  right: 1.3em;
+  bottom: -.1em;
+}
+
+footer .icon-links .fa-github {
+  position: absolute;
+  right: 3.3em;
+  bottom: -.1em;
+}
+
+footer .icon-links a:hover {
+  color: #cb983175;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+@media (orientation: portrait) and (max-width: 800px) {
+  footer .fa-2x {
+    font-size: 1.2rem;
+  }
+  footer .fa-github {
+    right: 2.8em !important;
+  }
+  footer .footer-copyright {
+    font-size: .7rem;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 1000px) {
+  footer .fa-2x {
+    font-size: 1.2rem;
+  }
+  footer .fa-github {
+    right: 4.8em !important;
+  }
+  footer .fa-linkedin {
+    right: 2em !important;
+  }
+  footer .footer-copyright {
+    font-size: .7rem;
+  }
 }
 
 .show-menu {
@@ -338,52 +411,6 @@ nav ul li {
   to {
     -webkit-transform: scaleX(0);
             transform: scaleX(0);
-  }
-}
-
-footer {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-bottom: 1em;
-}
-
-footer .footer-copyright {
-  margin: 0 auto;
-  padding-left: 4em;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  -ms-grid-column-align: center;
-      justify-self: center;
-}
-
-footer .icon-links {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  margin-right: 3em;
-}
-
-footer .icon-links a:hover {
-  color: #cb983175;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
-}
-
-footer .icon-links .push {
-  padding-right: 1em;
-}
-
-@media (max-width: 800px) {
-  footer .fa-2x {
-    font-size: 1.2rem;
-  }
-  footer .footer-copyright {
-    font-size: .7rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

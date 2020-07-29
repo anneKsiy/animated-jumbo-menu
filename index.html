@@ -8,9 +8,7 @@
     <title>Portfolio</title>
 </head>
 <body class="flex-container">
-
     <nav id="overlay">
-        <!-- <img src="https://img.icons8.com/material-sharp/24/000000/back.png" alt="back button" class="close-btn" id="close-menu"> -->
         <i class="fa fa-chevron-right close-btn fa-3x" id="close-menu" aria-hidden="true"></i>
         <ul>
             <li>
@@ -31,25 +29,13 @@
             </li>
         </ul>
     </nav>
-
     <header>
         <a href="#" class="logo"><img src="images/default-monochrome.svg" alt="logo" id="logo"></a>
-
-        <!-- <svg class="menu-btn" id="open-menu" width="80" height="58" viewBox="0 0 80 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect class="rect" width="60" height="10" rx="7" fill="#CB9831"/>
-            <rect class="rect" y="22" width="60" height="10" rx="7" fill="#CB9831"/>
-            <rect class="rect" y="44" width="60" height="10" rx="7" fill="#CB9831"/>
-            </svg> -->
-
         <i class="fa fa-bars menu-btn fa-3x" id="open-menu" aria-hidden="true"></i>
-            
-        <!-- <img src="https://img.icons8.com/material-rounded/24/000000/menu.png" alt="burger button" class="menu-btn" id="open-menu"> -->
     </header>
-    
     <section>
         <h1>a developer that gets you</h1>
     </section>
-
     <footer>
         <span class="footer-copyright">Copyright &copy; 2020 | Abdullah Adam </span>
         <div class="icon-links">
@@ -57,26 +43,6 @@
             <a href="#"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
         </div>
     </footer>
-
-    <script>
-        const overlay = document.getElementById("overlay");
-        const closeMenu = document.getElementById("close-menu");
-        const menuButton = document.getElementById("open-menu");
-
-        menuButton.addEventListener("click", function() {
-            overlay.classList.add("show-menu");
-        });
-
-        document.getElementById("close-menu").addEventListener("click", function() {
-            overlay.classList.add("hide-menu");
-            // overlay.classList.remove("show-menu");
-            // overlay.classList.remove("hide-menu");
-            setTimeout(function() {
-            overlay.classList.remove("show-menu");
-            overlay.classList.remove("hide-menu");
-        }, 3200);
-
-        });
-    </script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
